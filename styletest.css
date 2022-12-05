@@ -1,0 +1,184 @@
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+  }
+
+body {
+    background-color: #6f195c;
+    color: white;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0;
+}
+
+.header {
+    display: block;
+    /* border: solid 1px black; */
+    background-color: #9e5f13;
+    border-radius: 5px;
+    height: 30px;
+    text-align: center;
+    margin: 5px;
+    font-size: 24px;
+}
+
+.navigation {
+    display: block;
+    /* border: solid 1px black; */
+    height: 25px;
+    border-radius: 5px;
+    margin: 10px 5px 20px;
+    padding-left: 5px;
+    background-color:#9e5f13;
+}
+
+.nvg_button {
+    display: inline-block;
+    height: 25px;
+    border-radius: 5px;
+    border-color: transparent;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.nvg__search {
+    display: inline-block;
+    position: sticky;
+}
+
+.txt_button {
+    display: block;
+    position: absolute;
+    /* border: solid 1px black; */
+    width: 28%;
+    height: 520px;
+    margin-left: 5px;
+    margin-top: 0;
+}
+
+.letsgo_text {
+    display: block;
+    /* border: solid 1px black; */
+    margin: 25px 10px;
+    text-align: center;
+    font-size: 32px;
+}
+
+.generate_button {
+    display: block;
+    border: 1px ridge blue;
+    position: sticky;
+    top: 50%;
+    left: 10%;
+    margin: 5px;
+    width: 100px;
+    min-height: 50px;
+    font-size: 24px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 25px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.img_descr {
+    /* border: solid 1px black; */
+    width: 45%;
+    height: 520px;
+    display: block;
+    position: absolute;
+    left: 29%;
+    margin: 0;
+}
+
+.image {
+    width: 50%;
+    display: block;
+    border-style: inset;
+    margin: 5px auto 0px;
+}
+
+.add_favourite {
+    background-image: url(https://cdn-icons-png.flaticon.com/512/2954/2954893.png);
+    background-size: cover;
+    object-fit: fill;
+    width: 35px;
+    height: 35px;
+    display: block;
+    border-style: outset;
+    margin: 0 auto 10px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.cocktail_name {
+    display: block;
+    /* border: solid 1px black; */
+    margin: 0px 10px 15px;
+    height: 35px;
+    text-align: center;
+    font-size: 26px;
+    font-style: bold;
+}
+
+.ingreds {
+    display: block;
+    /* border: solid 1px black; */
+    margin: 20px 10px;
+    height: 50px;
+    text-align: center;
+}
+
+.comment {
+    display: block;
+    /* border: solid 1px black; */
+    margin: 20px 10px 0px;
+    height: 35px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.right_side_block {
+    display: block;
+    position: absolute;
+    right: 5px;
+    width: 25%;
+    height: 520px;
+    /* border: solid 1px black; */
+    margin-right: 0;
+}
+
+.login_panel {
+    display: block;
+    background-color: #9e5f13;
+    border: solid 1px black;
+    height: 130px;
+    margin: 0 0 15px;
+    padding-left: 15px;
+}
+
+.login_panel p{
+    margin-top: 10px;
+}
+
+.login_panel input {
+    margin-top: 10px;
+}
+
+.slider {
+    display: block;
+    border: solid 1px black;
+    background-color: #9e5f13;
+    height: 200px;
+    margin: 15px 0px;
+    padding-left: 15px;
+}
+
+.calendar {
+    display: block;
+    border: solid 1px black;
+    margin: 25px 10px;
+}

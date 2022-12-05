@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Test page</title>
+    <link rel="stylesheet" href="styletest.css" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <!-- ниже подключили стили для мобильных устройств: в конце урока сможете поделиться проектом в социальных сетях без страха, что на телефоне друга или подруги будет выглядеть некрасиво -->
+    <link
+      rel="stylesheet"
+      href="https://code.s3.yandex.net/web-code/adaptive.css"
+    />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  </head>
+  <body>
+    <div class="header">
+        Welcome to the test project of cocktails for your weekend!
+    </div>
+    <div class="navigation">
+        <button class="nvg_button">Home</button>
+        <button class="nvg_button">Favourite cocktails</button>
+        <button class="nvg_button">Account settings</button>
+        <button class="nvg_button">About</button>
+        <div class="nvg__search">
+            <form action="#">
+                <input type="text" placeholder="Search">
+            </form>
+        </div>
+    </div>    
+    <div class="txt_button">
+        <div class="letsgo_text">Let's find some cocktail for you!</div>
+        <button class="generate_button">Give me an idea!</button>
+    </div>
+    <div class="img_descr">
+        <div class="cocktail_name">Old fashioned</div>
+        <img class="image" src="https://www.thecocktaildb.com/images/media/drink/vrwquq1478252802.jpg" alt="Cocktail image">
+        <button class="add_favourite"></button>
+        <div class="ingreds">Ingredients:</div>
+        <div class="comment">Yaaaay, that's a good choice!</div>
+    </div>
+    <div class="right_side_block">
+        <div class="login_panel">
+            <p>Need to watch your favourite?</p>
+            <p>Log In or <a href="">create an account</a></p>
+            <input placeholder="Username">
+            <input placeholder="Password">
+            <button>Submit</button>
+        </div>
+        <div class="slider">
+            <p>Check out the most popular cocktails!</p>
+        </div>
+        <div class="calendar">Calendar</div>
+    </div>
+    <script src="/script.js"></script>
+  </body>
+</html>
