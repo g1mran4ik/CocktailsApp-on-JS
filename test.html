@@ -5,22 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Test page</title>
-    <link rel="stylesheet" href="styletest.css" />
-    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-    <!-- ниже подключили стили для мобильных устройств: в конце урока сможете поделиться проектом в социальных сетях без страха, что на телефоне друга или подруги будет выглядеть некрасиво -->
-    <link
-      rel="stylesheet"
-      href="https://code.s3.yandex.net/web-code/adaptive.css"
-    />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="./static/styletest.css" />
+    <link rel="icon" href="./static/favicon.ico" type="image/x-icon" />
   </head>
   <body>
+    <!-- Шапка сайта -->
     <div class="header">
         Welcome to the test project of cocktails for your weekend!
     </div>
+    <!-- Блок навигации -->
     <div class="navigation">
-        <button class="nvg_button">Home</button>
+        <button class="nvg_button" id="home">Home</button>
+        <button class="nvg_button" id="all">Generated cocktails</button>
         <button class="nvg_button">Favourite cocktails</button>
+        <button class="nvg_button">Disliked cocktails</button>
         <button class="nvg_button">Account settings</button>
         <button class="nvg_button">About</button>
         <div class="nvg__search">
@@ -28,43 +26,82 @@
                 <input type="text" placeholder="Search">
             </form>
         </div>
-    </div>    
-    <div class="txt_button">
-        <div class="letsgo_text">Let's find some cocktail for you!</div>
-        <button class="generate_button">Give me an idea!</button>
-    </div>
-    <div class="img_descr">
-        <div class="cocktail_name">Cocktail name</div>
-        <div class="image_block">
-            <div class="spinner"></div>
-            <img class="image" src="https://www.thecocktaildb.com/images/media/drink/vrwquq1478252802.jpg" alt="Cocktail image">
+    </div> 
+    <!-- Основной контент-блок -->
+    <div class="main_box">
+        <!-- Блок текста и кнопки рандомайзера -->
+        <div class="txt_button">
+            <div class="letsgo_text">Let's find some cocktail for you!</div>
+            <button class="generate_button">Give me an idea!</button>
         </div>
-        <button class="add_favourite"></button>
-        <div class="ingreds">Ingredients:</div>
-        <div class="comment">Comment</div>
-    </div>
-    <div class="right_side_block">
-        <div class="login_panel">
-            <p>Need to watch your favourite?</p>
-            <p>Log In or <a href="">create an account</a></p>
-            <input placeholder="Username">
-            <input placeholder="Password">
-            <button>Submit</button>
+        <!-- Блок рандомизации коктейля -->
+        <div class="cocktail_block">
+            <div class="cocktail_name">Cocktail name</div>
+            <div class="image_block">
+                <div class="spinner"></div>
+                <img class="image" src="https://www.thecocktaildb.com/images/media/drink/vrwquq1478252802.jpg" alt="Cocktail image">
+            </div>
+            <div class="like_buttons">
+                <button class="button_like"></button>
+                <button class="button_dislike"></button>
+            </div>
+            <div class="ingreds">Ingredients:</div>
+            <div class="comment">Comment</div>
         </div>
-        <div class="slider">
-            <p>Check out the most popular cocktails!</p>
-            <div class="slider_container">
-                <button class="slider_prev">
-                </button>
-                <div class="slide_wrapper">
-                    <div class="image_container">
-                    </div>
-                </div>
-                <button class="slider_next"></button>
+        <!-- Блок всех зарандомленных коктейлей -->
+        <div class="randomized_cocktail_page">
+            <div class="randomized_cocktail_img"></div>
+            <div class="randomized_cocktail_buttons">
+                <button class="listing_next_all">Next</button>
+                <button class="listing_prev_all">Prev</button>
             </div>
         </div>
-        <div class="calendar">Calendar</div>
-    </div>
-    <script src="/script.js"></script>
+        <div class="right_side_block">
+            <!-- Блок авторизации/регистрации -->
+            <div class="login_panel">
+                <p>Need to watch your favourite?</p>
+                <p>Log In or <a class="trigger" href="">create an account</a></p>
+                <input placeholder="Username">
+                <input placeholder="Password">
+                <button>Submit</button>
+            </div>
+            <!-- Блок модального окна -->
+            <div class="account_modal" data-modal>
+                <div class="account_create_modal">
+                    <div class="modal_content text-center">
+                        <button type="button" class="modal_close"><strong>&times;</strong></button>
+                        <div class="account_form">
+                            <form class="form" action="#">
+                              <h2>Create an account <br><span>for collect favourite cocktails!</span></h2>
+                              <input class="form_control form_input" name="user_login" required type="text" placeholder="Input your nickname">
+                              <input class="form_control form_input" name="user_password" required type="text" placeholder="Create password">
+                              <input class="form_control form_input" name="user_email" required type="text" placeholder="Write your email">
+                              <button class="btn_account" name="submit" type="submit">Create account!</button>
+                              <p class="form_notice">Easy steps to get collection!</p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Блок слайдера -->
+            <div class="slider">
+                <p>Check out the most popular cocktails!</p>
+                <div class="slider_container">
+                    <button class="slider_prev">
+                    </button>
+                    <div class="slide_wrapper">
+                        <div class="image_container">
+                        </div>
+                    </div>
+                    <button class="slider_next"></button>
+                </div>
+            </div>
+            <!-- Блок календаря -->
+            <div class="calendar">
+                <iframe src="https://calendar.google.com/calendar/embed?height=200&wkst=2&bgcolor=%239f6f23&ctz=Europe%2FMoscow&showTitle=0&showNav=1&showPrint=0&showCalendars=0&showTabs=0&showTz=0&showDate=1&hl=en_GB" style="border:solid 1px #777" width="100%" height="100%" frameborder="0" scrolling="no" margin="0"></iframe>
+            </div>
+        </div>
+    </div>  
+    <script src="./static/js/bundle.js"></script>
   </body>
 </html>
